@@ -23,7 +23,7 @@ public class PdfController {
     public ResponseEntity<?> generatePdf(){
         try {
             pdfService.convertHtmlToPdf();
-            return ResponseEntity.status(HttpStatus.OK).body("PDF generated successfully at: " );
+            return ResponseEntity.status(HttpStatus.OK).body("PDF generated successfully");
         }catch (Exception ex){
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error generating PDF load");
         }
